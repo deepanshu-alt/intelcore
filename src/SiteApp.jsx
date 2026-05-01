@@ -815,7 +815,26 @@ function ContactSection() {
               <h2 className="font-display text-4xl font-semibold leading-tight text-white sm:text-5xl">Book a call, start on WhatsApp, or send us a brief through the form.</h2>
               <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">If the project needs premium design, sharp execution, and a faster path to better leads, we should talk.</p>
               <div className="mt-8 grid gap-4">
-                <ContactCard icon={Mail} title="Email" body={CONTACT_EMAIL} href={`mailto:${CONTACT_EMAIL}?subject=Project%20Inquiry`} />
+                <ContactCard
+                  icon={Mail}
+                  title="Email"
+                  body={
+                    <>
+                      <a
+                        className="block break-all transition hover:text-white"
+                        href={`mailto:${CONTACT_EMAIL}?subject=Project%20Inquiry`}
+                      >
+                        {CONTACT_EMAIL}
+                      </a>
+                      <a
+                        className="mt-1 block break-all transition hover:text-white"
+                        href="mailto:deepanshuverma09.official@gmail.com?subject=Project%20Inquiry"
+                      >
+                        deepanshuverma09.official@gmail.com
+                      </a>
+                    </>
+                  }
+                />
                 <ContactCard icon={PhoneCall} title="Phone" body={PHONE_DISPLAY} href={`tel:+${PHONE_E164}`} />
                 <ContactCard icon={Clock3} title="Response time" body="Usually within 1 business day for qualified inquiries." />
               </div>
@@ -1032,7 +1051,7 @@ function FooterColumn({ title, children }) {
 function BrandLogo({ className = "", priority = false }) {
   return (
     <img
-      src="/intellcore-logo.jpeg"
+      src="/intellcore-logo.png"
       alt={`${COMPANY_NAME} logo`}
       width="1152"
       height="768"
