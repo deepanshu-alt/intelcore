@@ -7,7 +7,7 @@
     "dev": "vite",
     "dev:api": "node server.js",
     "dev:full": "concurrently \"npm run dev:api\" \"npm run dev\"",
-    "build": "vite build",
+    "build": "npx vite build",
     "preview": "vite preview",
     "start": "node server.js"
   },
